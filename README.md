@@ -1,78 +1,37 @@
-<<<<<<< HEAD
-# OC_Groupomania
-=======
-<<<<<<< HEAD
-# OC_Groupomania
-=======
-# Getting Started with Create React App
+Comment faire fonctionner le site ?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Installation
+Avant toute chose, vérifiez que NodeJS 16.14 soit installé sur votre ordinateur puis clonez le projet.
 
-## Available Scripts
+Le projet est construit de 2 fichier essentiel Back-end et Front-end
 
-In the project directory, you can run:
+BACK-END
 
-### `npm start`
+1- Aller sur le fichier back-end depuis le terminal est faite la commande "npm install"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2- Dans le dossier back-end créer un fichier .env et ajouter :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-"MONGO_URI = 'mongodb+srv://teddy:teddy76@opcproject.wkopffr.mongodb.net/?retryWrites=true&w=majority'"
+-"TOKEN = "RANDOM_TOKEN_SECRET""
+-"PORT:8080"
 
-### `npm test`
+3- Une fois le fichier .env créer, démarrer le serveur back-end depuis le terminal,toujours depuis le fichier back-end avec la commande "nodemon server"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Le serveur devrait ce lancer sur le PORT 8080
 
-### `npm run build`
+FRONT-END
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1- Aller sur le fichier front-end depuis le terminal désormais est faite la commande "npm install" encore une fois
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2- Une fois tout installé il ne vous reste plus qu'à lancer le front-end toujours depuis le serveur avec la commande "npm start"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3- L'application front-end s'ouvrira donc sur votre navigateur sur le port 3000 (il est nécessaire d'être sur le port 3000 et pas un autre)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+exemple-administrateur
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+"email: admin@gmail.com"
+"mots de passe: admin"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 8ed2727 (First commit)
->>>>>>> 82c1b7f (First commit)
+(il n'est pas possible de supprimer le compte ou retirer les droits d'un autre admin )
+Bonne navigation !
