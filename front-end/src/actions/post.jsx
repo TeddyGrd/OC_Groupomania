@@ -63,7 +63,7 @@ export const PostLike = (postId, userId) => {
   return (dispatch) => {
     return axios({
       method: 'patch',
-      url: `http://localhost:8080/api/post/like/` + postId,
+      url: `http://localhost:8080/api/post/like/${postId}`,
       data: { id: userId },
     })
       .then(() => {
@@ -77,7 +77,7 @@ export const PostDislike = (postId, userId) => {
   return (dispatch) => {
     return axios({
       method: 'patch',
-      url: `http://localhost:8080/api/post/dislike/` + postId,
+      url: `http://localhost:8080/api/post/dislike/${postId}`,
       data: { id: userId },
     })
       .then(() => {

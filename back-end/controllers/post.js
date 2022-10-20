@@ -1,6 +1,7 @@
 const Post = require('../models/Post');
 const User = require('../models/User')
 const sharp = require("sharp")
+const fs = require("fs")
 const ObjectID = require("mongoose").Types.ObjectId;
 
 
@@ -39,7 +40,6 @@ exports.getAllPost = (req, res) => {
       };
 
 exports.likePost = (req, res) => {
-  console.log(req.body.id,"    ",req.params.id)
   let user = req.params.id
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknown : " + req.params.id);
@@ -126,11 +126,16 @@ exports.deletePost = (req, res, next) => {
   _id : req.params.id
 }).then(post => {
     const filename = post.picture.split("/uploads/posts/")[1];
+    if(filename !== undefined){
         fs.unlink(`${__dirname}/../../front-end/public/uploads/posts/${filename}`, () => {
             Post.deleteOne({ _id:req.params.id })
             .then(() => res.status(200).json({message: 'Objet supprimé !'}))
             .catch(error => res.status(400).json({error }));
-        });
+        })}else{
+          Post.deleteOne({ _id:req.params.id })
+          .then(() => res.status(200).json({message: 'Objet supprimé !'}))
+          .catch(error => res.status(400).json({error }));
+        };
 })
 .catch(error => res.status(500).json({ error}));
   };

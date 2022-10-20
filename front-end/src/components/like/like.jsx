@@ -8,27 +8,30 @@ const Like = ({ post }) => {
   const uid = useContext(UidContext)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    if (post.likers.includes(uid)) setLiked(true)
-    else setLiked(false)
-  }, [uid, post.likers, liked])
-
   const like = () => {
     dispatch(PostLike(post._id, uid))
     setLiked(true)
+    window.location.reload()
   }
   const unlike = () => {
     dispatch(PostDislike(post._id, uid))
     setLiked(false)
+    window.location.reload()
   }
 
+  useEffect(() => {
+    if (post.likers.includes(uid)) {
+      setLiked(true)
+    } else setLiked(false)
+  }, [uid, post, liked])
+
   return (
-    <div className="ContenaireLike">
+    <div>
       {uid && liked === false && (
         <i className="fa-solid fa-heart" onClick={like}></i>
       )}
       {uid && liked && <i className="fa-solid fa-heart" onClick={unlike}></i>}
-      <span className="numberLike">{post.likers.length}</span>
+      <span>{post.likers.length}</span>
     </div>
   )
 }

@@ -3,7 +3,6 @@ const User = require('../models/User')
 
 require('dotenv').config()
 
-//Comparaison des token
 module.exports.checkUser = (req, res, next) => {
   const token = req.cookies.jwt;
   if (token) {
@@ -23,7 +22,6 @@ module.exports.checkUser = (req, res, next) => {
   }
 };
 
-//Capture l'erreur en cas de Token non valide
 exports.requireAuth = (req, res, next) => {
   const token = req.cookies.jwt;
   if (token) {

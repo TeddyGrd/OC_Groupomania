@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const LoginMain = styled.div`
@@ -90,7 +89,6 @@ const LoginError = styled.div`
 
 function Login() {
   const { register, handleSubmit } = useForm()
-  const navigate = useNavigate()
 
   const onSubmit = async (data, e) => {
     e.preventDefault()
@@ -108,7 +106,7 @@ function Login() {
           emailError.innerHTML = res.data.errors.email
           passwordError.innerHTML = res.data.errors.password
         } else {
-          navigate('/')
+          window.location.assign('/')
         }
       })
       .catch((err) => {

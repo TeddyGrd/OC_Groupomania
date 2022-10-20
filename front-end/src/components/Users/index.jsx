@@ -109,6 +109,7 @@ function CardUsers({ users }) {
       )
     ) {
       dispatch(UserDelete(users._id))
+      window.location.reload('/admin')
     }
   }
 
@@ -119,6 +120,7 @@ function CardUsers({ users }) {
       )
     ) {
       dispatch(UserAdmin(users._id))
+      window.location.reload('/admin')
     }
   }
 
