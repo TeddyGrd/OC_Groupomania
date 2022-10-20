@@ -11,17 +11,9 @@ BACK-END
 
 2- Dans le dossier back-end créer un fichier .env et ajouter :
 
-<<<<<<< HEAD
--"MONGO_URI = 'mongodb+srv://teddy:teddy76@opcproject.wkopffr.mongodb.net/?retryWrites=true&w=majority'"
-
--"TOKEN = "RANDOM_TOKEN_SECRET""
-
--"PORT:8080"
-=======
 -MONGO_URI = 'mongodb+srv://teddy:teddy76@opcproject.wkopffr.mongodb.net/?retryWrites=true&w=majority'
 -TOKEN = "RANDOM_TOKEN_SECRET"
 -PORT:"8080"
->>>>>>> 00cb95e (Dernière modification)
 
 3- Une fois le fichier .env créer, démarrer le serveur back-end depuis le terminal,toujours depuis le fichier back-end avec la commande "nodemon server"
 
@@ -36,15 +28,5 @@ FRONT-END
 3- L'application front-end s'ouvrira donc sur votre navigateur sur le port 3000 (il est nécessaire d'être sur le port 3000 et pas un autre)
 
 
-<<<<<<< HEAD
-exemple-administrateur
 
-"email: admin@gmail.com"
-
-"mots de passe: admin"
-
-(il n'est pas possible de supprimer le compte ou retirer les droits d'un autre admin )
-
-=======
->>>>>>> 00cb95e (Dernière modification)
 Bonne navigation !
