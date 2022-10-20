@@ -32,3 +32,6 @@ FRONT-END
 
 
 Bonne navigation !
+
+
+--------  les photo ne sont pas upload sur le github mais sont lié localement (Une photo ne sera donc pas accesible via un pc différent) ------
